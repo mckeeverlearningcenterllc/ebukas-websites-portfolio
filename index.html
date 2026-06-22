@@ -6,6 +6,17 @@
   <title>Jonabby &amp; Co. Enterprises — Web Design for Nigerian Businesses</title>
   <meta name="description" content="Professional, affordable websites for Nigerian businesses. Fast, mobile-friendly, and built to grow your brand." />
   <link rel="icon" type="image/jpeg" href="jonabby-icon.jpg" />
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jonabby.com.ng/" />
+  <meta property="og:site_name" content="Jonabby &amp; Co. Enterprises" />
+  <meta property="og:title" content="Jonabby &amp; Co. Enterprises — Web Design for Nigerian Businesses" />
+  <meta property="og:description" content="Affordable, mobile-first websites for Nigerian businesses — delivered in days, not months. Your Business Growth Partner." />
+  <meta property="og:image" content="https://jonabby.com.ng/jonabby-logo.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Jonabby &amp; Co. Enterprises — Web Design for Nigerian Businesses" />
+  <meta name="twitter:description" content="Affordable, mobile-first websites for Nigerian businesses — delivered in days, not months. Your Business Growth Partner." />
+  <meta name="twitter:image" content="https://jonabby.com.ng/jonabby-logo.jpg" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     html { scroll-behavior: smooth; }
@@ -28,13 +39,28 @@
   <nav class="fixed top-0 w-full bg-white shadow-sm z-50">
     <div class="max-w-5xl mx-auto px-4 py-3 flex justify-between items-center">
       <img src="jonabby-logo.jpg" alt="Jonabby &amp; Co. Enterprises" class="h-12 w-auto" />
-      <div class="flex gap-6 text-sm font-medium">
+      <!-- Desktop links -->
+      <div class="hidden md:flex gap-6 text-sm font-medium">
         <a href="#about" class="hover:text-green-700">About</a>
         <a href="#services" class="hover:text-green-700">Services</a>
         <a href="#pricing" class="hover:text-green-700">Pricing</a>
         <a href="#portfolio" class="hover:text-green-700">Portfolio</a>
         <a href="#contact" class="hover:text-green-700">Contact</a>
       </div>
+      <!-- Hamburger button (mobile only) -->
+      <button id="nav-toggle" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Open menu">
+        <span class="block w-6 h-0.5 bg-gray-800"></span>
+        <span class="block w-6 h-0.5 bg-gray-800"></span>
+        <span class="block w-6 h-0.5 bg-gray-800"></span>
+      </button>
+    </div>
+    <!-- Mobile dropdown menu -->
+    <div id="nav-menu" class="hidden bg-white border-t border-gray-100 px-6 py-4 flex-col gap-4 text-sm font-medium">
+      <a href="#about" class="block hover:text-green-700" onclick="closeNav()">About</a>
+      <a href="#services" class="block hover:text-green-700" onclick="closeNav()">Services</a>
+      <a href="#pricing" class="block hover:text-green-700" onclick="closeNav()">Pricing</a>
+      <a href="#portfolio" class="block hover:text-green-700" onclick="closeNav()">Portfolio</a>
+      <a href="#contact" class="block hover:text-green-700" onclick="closeNav()">Contact</a>
     </div>
   </nav>
 
@@ -58,7 +84,7 @@
   <section id="about" class="py-16 px-4 bg-gray-50">
     <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-10">
       <div class="w-full md:w-1/3 flex-shrink-0">
-        <img src="ebuka-profile.jpeg" alt="Ebuka" class="w-40 h-40 rounded-full mx-auto object-cover shadow-lg" />
+        <img src="ebuka-profile.jpeg" alt="Ebuka, founder of Jonabby &amp; Co. Enterprises" class="w-40 h-40 rounded-full mx-auto object-cover shadow-lg" />
         <p class="text-center text-gray-500 text-sm mt-4">Lagos, Nigeria</p>
       </div>
       <div class="w-full md:w-2/3">
@@ -66,7 +92,7 @@
         <h2 class="text-3xl font-bold mb-4">Jonabby &amp; Co. Enterprises</h2>
         <p class="text-gray-600 leading-relaxed mb-4">We are a Lagos-based web designing company with a team of professionals with over 20 years of experience building websites — now using the latest modern tools and AI-powered technology to deliver faster, smarter results than ever before.</p>
         <p class="text-gray-600 leading-relaxed mb-4">Our mission is simple: every Nigerian business deserves a quality website that actually brings in customers — not just something that looks good. We build sites that work hard for your business, at prices that make sense.</p>
-        <p class="text-gray-600 leading-relaxed">Our team have a background in other areas such as in education with a special passion for schools, training centres, and institutions — but we love helping businesses of all kinds get online and grow.</p>
+        <p class="text-gray-600 leading-relaxed">Our team also has a background in education, with a special passion for schools, training centres, and institutions — but we love helping businesses of all kinds get online and grow.</p>
       </div>
     </div>
   </section>
@@ -174,7 +200,7 @@
             <li class="flex items-start gap-2"><span class="text-green-600 font-bold">&#10003;</span> 1–3 pages</li>
             <li class="flex items-start gap-2"><span class="text-green-600 font-bold">&#10003;</span> Mobile-friendly design</li>
             <li class="flex items-start gap-2"><span class="text-green-600 font-bold">&#10003;</span> WhatsApp contact button</li>
-            <li class="flex items-start gap-2"><span class="text-green-600 font-bold">&#10003;</span> Free Netlify hosting setup</li>
+            <li class="flex items-start gap-2"><span class="text-green-600 font-bold">&#10003;</span> Free hosting setup</li>
             <li class="flex items-start gap-2"><span class="text-green-600 font-bold">&#10003;</span> Delivered in 3–5 days</li>
           </ul>
           <a href="https://wa.me/2349079746882?text=Hi%20Ebuka%2C%20I%27m%20interested%20in%20the%20Starter%20package."
@@ -579,6 +605,13 @@
       </svg>
     </div>
   </a>
+
+  <script>
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    navToggle.addEventListener('click', () => navMenu.classList.toggle('hidden'));
+    function closeNav() { navMenu.classList.add('hidden'); }
+  </script>
 
 </body>
 </html>
