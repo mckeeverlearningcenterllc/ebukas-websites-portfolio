@@ -78,10 +78,22 @@
 
   <!-- BLOG CARDS -->
   <section class="py-16 px-4 max-w-5xl mx-auto">
-    <div class="grid md:grid-cols-3 gap-8">
+
+    <!-- CATEGORY FILTER -->
+    <div class="flex flex-wrap gap-2 justify-center mb-10" id="category-filter">
+      <button data-filter="all" class="filter-btn bg-green-700 text-white text-sm font-semibold px-4 py-1.5 rounded-full transition">All</button>
+      <button data-filter="trust-safety" class="filter-btn bg-gray-100 text-gray-700 text-sm font-semibold px-4 py-1.5 rounded-full hover:bg-gray-200 transition">Trust &amp; Safety</button>
+      <button data-filter="cost-value" class="filter-btn bg-gray-100 text-gray-700 text-sm font-semibold px-4 py-1.5 rounded-full hover:bg-gray-200 transition">Cost &amp; Value</button>
+      <button data-filter="pricing" class="filter-btn bg-gray-100 text-gray-700 text-sm font-semibold px-4 py-1.5 rounded-full hover:bg-gray-200 transition">Pricing</button>
+      <button data-filter="marketing" class="filter-btn bg-gray-100 text-gray-700 text-sm font-semibold px-4 py-1.5 rounded-full hover:bg-gray-200 transition">Marketing</button>
+      <button data-filter="website-strategy" class="filter-btn bg-gray-100 text-gray-700 text-sm font-semibold px-4 py-1.5 rounded-full hover:bg-gray-200 transition">Website Strategy</button>
+      <button data-filter="contest" class="filter-btn bg-gray-100 text-gray-700 text-sm font-semibold px-4 py-1.5 rounded-full hover:bg-gray-200 transition">Contest</button>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8" id="blog-grid">
 
       <!-- Contest -->
-      <a href="blog-detty-december-contest.html" class="bg-gray-50 rounded-xl overflow-hidden shadow-sm border border-gray-100 flex flex-col hover:shadow-md transition relative">
+      <a href="blog-detty-december-contest.html" data-category="contest" class="blog-card bg-gray-50 rounded-xl overflow-hidden shadow-sm border border-gray-100 flex flex-col hover:shadow-md transition relative">
         <span class="absolute top-3 left-3 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full z-10">Contest</span>
         <div class="w-full h-44 overflow-hidden">
           <img src="https://images.pexels.com/photos/2263436/pexels-photo-2263436.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Lagos nightlife and celebration" class="w-full h-full object-cover" />
@@ -95,11 +107,12 @@
       </a>
 
       <!-- Post: Scam Warning -->
-      <a href="blog-website-scam-warning.html" class="bg-gray-50 rounded-xl overflow-hidden shadow-sm border border-gray-100 flex flex-col hover:shadow-md transition">
+      <a href="blog-website-scam-warning.html" data-category="trust-safety" class="blog-card bg-gray-50 rounded-xl overflow-hidden shadow-sm border border-gray-100 flex flex-col hover:shadow-md transition">
         <div class="w-full h-44 overflow-hidden">
           <img src="https://images.pexels.com/photos/5926382/pexels-photo-5926382.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Person looking concerned at a laptop" class="w-full h-full object-cover" />
         </div>
         <div class="p-6 flex flex-col flex-1">
+          <span class="inline-block w-fit text-xs font-semibold px-2 py-0.5 rounded-full mb-2 bg-rose-50 text-rose-700">Trust &amp; Safety</span>
           <div class="text-xs text-gray-400 mb-2">September 30, 2026</div>
           <h3 class="font-bold text-lg mb-2 leading-snug">How to Spot a Website Scam Before You Pay a Developer</h3>
           <p class="text-gray-500 text-sm leading-relaxed flex-1">Web design scams are common in Nigeria. Here are the exact warning signs to check before you pay anyone — and what a trustworthy developer does differently.</p>
@@ -108,11 +121,12 @@
       </a>
 
       <!-- Post: Developer Disappears -->
-      <a href="blog-developer-disappears.html" class="bg-gray-50 rounded-xl overflow-hidden shadow-sm border border-gray-100 flex flex-col hover:shadow-md transition">
+      <a href="blog-developer-disappears.html" data-category="trust-safety" class="blog-card bg-gray-50 rounded-xl overflow-hidden shadow-sm border border-gray-100 flex flex-col hover:shadow-md transition">
         <div class="w-full h-44 overflow-hidden">
           <img src="https://images.pexels.com/photos/4144923/pexels-photo-4144923.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Person waiting for a phone call that isn't coming" class="w-full h-full object-cover" />
         </div>
         <div class="p-6 flex flex-col flex-1">
+          <span class="inline-block w-fit text-xs font-semibold px-2 py-0.5 rounded-full mb-2 bg-rose-50 text-rose-700">Trust &amp; Safety</span>
           <div class="text-xs text-gray-400 mb-2">September 30, 2026</div>
           <h3 class="font-bold text-lg mb-2 leading-snug">What Happens If Your Web Developer Disappears?</h3>
           <p class="text-gray-500 text-sm leading-relaxed flex-1">It happens more than people admit. Here's how to protect yourself before it happens, and what to do if it already has.</p>
@@ -121,11 +135,12 @@
       </a>
 
       <!-- Post: Website Ownership -->
-      <a href="blog-website-ownership.html" class="bg-gray-50 rounded-xl overflow-hidden shadow-sm border border-gray-100 flex flex-col hover:shadow-md transition">
+      <a href="blog-website-ownership.html" data-category="trust-safety" class="blog-card bg-gray-50 rounded-xl overflow-hidden shadow-sm border border-gray-100 flex flex-col hover:shadow-md transition">
         <div class="w-full h-44 overflow-hidden">
           <img src="https://images.pexels.com/photos/48148/document-agreement-documents-sign-48148.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Signing a document" class="w-full h-full object-cover" />
         </div>
         <div class="p-6 flex flex-col flex-1">
+          <span class="inline-block w-fit text-xs font-semibold px-2 py-0.5 rounded-full mb-2 bg-rose-50 text-rose-700">Trust &amp; Safety</span>
           <div class="text-xs text-gray-400 mb-2">September 30, 2026</div>
           <h3 class="font-bold text-lg mb-2 leading-snug">Do You Really Own Your Website?</h3>
           <p class="text-gray-500 text-sm leading-relaxed flex-1">Paying for a website doesn't automatically mean you own it. Here's exactly what to check — domain, hosting, and source files — before you pay anyone.</p>
@@ -134,11 +149,12 @@
       </a>
 
       <!-- Post 1 -->
-      <a href="blog-website-needs-2026.html" class="bg-gray-50 rounded-xl overflow-hidden shadow-sm border border-gray-100 flex flex-col hover:shadow-md transition">
+      <a href="blog-website-needs-2026.html" data-category="website-strategy" class="blog-card bg-gray-50 rounded-xl overflow-hidden shadow-sm border border-gray-100 flex flex-col hover:shadow-md transition">
         <div class="w-full h-44 overflow-hidden">
           <img src="https://images.pexels.com/photos/3182833/pexels-photo-3182833.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Business owner using a laptop" class="w-full h-full object-cover" />
         </div>
         <div class="p-6 flex flex-col flex-1">
+          <span class="inline-block w-fit text-xs font-semibold px-2 py-0.5 rounded-full mb-2 bg-slate-100 text-slate-700">Website Strategy</span>
           <div class="text-xs text-gray-400 mb-2">September 26, 2026</div>
           <h3 class="font-bold text-lg mb-2 leading-snug">5 Reasons Your Nigerian Business Needs a Website in 2026</h3>
           <p class="text-gray-500 text-sm leading-relaxed flex-1">Instagram and WhatsApp are great, but they're not enough on their own anymore. Here's why a real website still matters — and what it does that social media can't.</p>
@@ -147,11 +163,12 @@
       </a>
 
       <!-- Post 2 -->
-      <a href="blog-whatsapp-vs-website.html" class="bg-gray-50 rounded-xl overflow-hidden shadow-sm border border-gray-100 flex flex-col hover:shadow-md transition">
+      <a href="blog-whatsapp-vs-website.html" data-category="marketing" class="blog-card bg-gray-50 rounded-xl overflow-hidden shadow-sm border border-gray-100 flex flex-col hover:shadow-md transition">
         <div class="w-full h-44 overflow-hidden">
           <img src="https://images.pexels.com/photos/4498482/pexels-photo-4498482.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Person messaging on phone" class="w-full h-full object-cover" />
         </div>
         <div class="p-6 flex flex-col flex-1">
+          <span class="inline-block w-fit text-xs font-semibold px-2 py-0.5 rounded-full mb-2 bg-blue-50 text-blue-700">Marketing</span>
           <div class="text-xs text-gray-400 mb-2">September 26, 2026</div>
           <h3 class="font-bold text-lg mb-2 leading-snug">WhatsApp Business vs a Real Website: Why You Need Both</h3>
           <p class="text-gray-500 text-sm leading-relaxed flex-1">WhatsApp is where you close the sale. Your website is where you win the customer's trust before they ever message you. Here's how the two work together.</p>
@@ -160,11 +177,12 @@
       </a>
 
       <!-- Post 3 -->
-      <a href="blog-website-cost-nigeria.html" class="bg-gray-50 rounded-xl overflow-hidden shadow-sm border border-gray-100 flex flex-col hover:shadow-md transition">
+      <a href="blog-website-cost-nigeria.html" data-category="pricing" class="blog-card bg-gray-50 rounded-xl overflow-hidden shadow-sm border border-gray-100 flex flex-col hover:shadow-md transition">
         <div class="w-full h-44 overflow-hidden">
           <img src="https://images.pexels.com/photos/6963017/pexels-photo-6963017.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Calculator and notebook" class="w-full h-full object-cover" />
         </div>
         <div class="p-6 flex flex-col flex-1">
+          <span class="inline-block w-fit text-xs font-semibold px-2 py-0.5 rounded-full mb-2 bg-amber-50 text-amber-700">Pricing</span>
           <div class="text-xs text-gray-400 mb-2">September 26, 2026</div>
           <h3 class="font-bold text-lg mb-2 leading-snug">How Much Should a Website Cost in Nigeria? A Straight Answer</h3>
           <p class="text-gray-500 text-sm leading-relaxed flex-1">Prices range from &#8358;20,000 to millions — and the difference isn't always what you'd expect. Here's what actually drives website cost, so you don't overpay or under-budget.</p>
@@ -173,11 +191,12 @@
       </a>
 
       <!-- Post: Free Builders vs Professional -->
-      <a href="blog-free-builders-vs-professional.html" class="bg-gray-50 rounded-xl overflow-hidden shadow-sm border border-gray-100 flex flex-col hover:shadow-md transition">
+      <a href="blog-free-builders-vs-professional.html" data-category="cost-value" class="blog-card bg-gray-50 rounded-xl overflow-hidden shadow-sm border border-gray-100 flex flex-col hover:shadow-md transition">
         <div class="w-full h-44 overflow-hidden">
           <img src="https://images.pexels.com/photos/196645/pexels-photo-196645.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Person comparing options on a laptop" class="w-full h-full object-cover" />
         </div>
         <div class="p-6 flex flex-col flex-1">
+          <span class="inline-block w-fit text-xs font-semibold px-2 py-0.5 rounded-full mb-2 bg-emerald-50 text-emerald-700">Cost &amp; Value</span>
           <div class="text-xs text-gray-400 mb-2">October 9, 2026</div>
           <h3 class="font-bold text-lg mb-2 leading-snug">Free Website Builders vs Hiring a Professional: What You're Actually Giving Up</h3>
           <p class="text-gray-500 text-sm leading-relaxed flex-1">Free builders promise a site in minutes. Here's what you're actually giving up when you choose one over a professional — and when a free builder is genuinely fine.</p>
@@ -186,11 +205,12 @@
       </a>
 
       <!-- Post: 20k vs 120k -->
-      <a href="blog-20k-vs-120k-website.html" class="bg-gray-50 rounded-xl overflow-hidden shadow-sm border border-gray-100 flex flex-col hover:shadow-md transition">
+      <a href="blog-20k-vs-120k-website.html" data-category="cost-value" class="blog-card bg-gray-50 rounded-xl overflow-hidden shadow-sm border border-gray-100 flex flex-col hover:shadow-md transition">
         <div class="w-full h-44 overflow-hidden">
           <img src="https://images.pexels.com/photos/7319070/pexels-photo-7319070.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Comparing two options side by side" class="w-full h-full object-cover" />
         </div>
         <div class="p-6 flex flex-col flex-1">
+          <span class="inline-block w-fit text-xs font-semibold px-2 py-0.5 rounded-full mb-2 bg-emerald-50 text-emerald-700">Cost &amp; Value</span>
           <div class="text-xs text-gray-400 mb-2">October 9, 2026</div>
           <h3 class="font-bold text-lg mb-2 leading-snug">&#8358;20k Website vs &#8358;120k Website: What's the Real Difference?</h3>
           <p class="text-gray-500 text-sm leading-relaxed flex-1">Both will technically get you "a website." Here's a head-to-head look at what actually changes between a &#8358;20,000 site and a &#8358;120,000 site.</p>
@@ -199,11 +219,12 @@
       </a>
 
       <!-- Post: Hidden Costs -->
-      <a href="blog-hidden-costs-cheap-website.html" class="bg-gray-50 rounded-xl overflow-hidden shadow-sm border border-gray-100 flex flex-col hover:shadow-md transition">
+      <a href="blog-hidden-costs-cheap-website.html" data-category="cost-value" class="blog-card bg-gray-50 rounded-xl overflow-hidden shadow-sm border border-gray-100 flex flex-col hover:shadow-md transition">
         <div class="w-full h-44 overflow-hidden">
           <img src="https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Calculating unexpected expenses" class="w-full h-full object-cover" />
         </div>
         <div class="p-6 flex flex-col flex-1">
+          <span class="inline-block w-fit text-xs font-semibold px-2 py-0.5 rounded-full mb-2 bg-emerald-50 text-emerald-700">Cost &amp; Value</span>
           <div class="text-xs text-gray-400 mb-2">October 9, 2026</div>
           <h3 class="font-bold text-lg mb-2 leading-snug">Hidden Costs of a "Cheap" Website Nobody Warns You About</h3>
           <p class="text-gray-500 text-sm leading-relaxed flex-1">The upfront price is only part of the story. Here are the hidden costs that show up later with a cheap website — and how to spot them before you pay anyone.</p>
@@ -255,6 +276,25 @@
     const navMenu = document.getElementById('nav-menu');
     navToggle.addEventListener('click', () => navMenu.classList.toggle('hidden'));
     function closeNav() { navMenu.classList.add('hidden'); }
+
+    // Category filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('#blog-grid .blog-card');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-green-700', 'text-white');
+          b.classList.add('bg-gray-100', 'text-gray-700');
+        });
+        btn.classList.remove('bg-gray-100', 'text-gray-700');
+        btn.classList.add('bg-green-700', 'text-white');
+        cards.forEach(card => {
+          const show = filter === 'all' || card.dataset.category === filter;
+          card.style.display = show ? '' : 'none';
+        });
+      });
+    });
   </script>
 
 </body>
